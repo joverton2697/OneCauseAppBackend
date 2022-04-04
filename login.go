@@ -38,7 +38,7 @@ func login(w http.ResponseWriter, r *http.Request) {
 
 	if username != "c137@onecause.com" || password != "#th@nH@rm#y#r!$100%D0p#" || token != tokenCompare {
 		resp := make(map[string]string)
-		resp["response"] = password + " is not #th@nH@rm#y#r!$100%D0p#"
+		resp["response"] = "Username, password, or token is invalid"
 		jsonResp, err := json.Marshal(resp)
 		if err != nil {
 			log.Fatalf("Error happened in JSON marshal. Err: %s", err)
